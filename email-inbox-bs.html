@@ -1,54 +1,56 @@
-<!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap Grid</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="email-inbox-bs.css">
   </head>
 
   <body>
 
     <div class="container-fluid">
       <div class="row w-100">
-        <div class="col-md-3"> 
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-              Navigation Menu
-            </button>
-          
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-              <div class="card card-body" style="width: 300px;">
-                <div class="list-group">
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Main Inbox</a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Starred</a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Archived</a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Labeled</a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Spam</a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Trash</a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Sent</a>
-                  <a href="#" class="list-group-item list-group-item-action list-group-item-success">Drafts</a>
-                </div>  
-                  <button type="button" class="btn btn-outline-dark">Compose</button>
-              </div>
-              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">Emails</button>
-                <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                  <div class="card card-body" style="width: 300px;">
+
+        <div class="col-lg-2">
+          <h1> Logo here</h1>
+          <p>
+          <a class="btn btn-primary collapsed" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Navigation Menu</a>
+          <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Inbox</button>
+          <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle</button>
+          </p>
+
+          <div class="multi-collapse collapse" id="multiCollapseExample1">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Main Inbox</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Starred</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Archived</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Labeled</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Spam</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Trash</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Sent</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Drafts</a>
+            </div>  
+            <button type="button" class="btn btn-outline-dark">Compose</button>
+          </div>
+            <div class="full-email-toggle">
+              <div class="multi-collapse collapse" id="multiCollapseExample2">
+                  <div class="card card-body">
                     <div class="email-search-function">
                       <input type="text" label="Email Search" placeholder="AnonEmail.co">
                       <button type="button" class="btn btn-outline-dark" id="Email-search-submission">Submit</button>
                     </div>
-                      <div class="dropdown">
-                        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sort & Filter</a>
-                          <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Sort By Date</a></li>
-                            <li><a class="dropdown-item" href="#">Has Attachment</a></li>
-                            <li><a class="dropdown-item" href="#">Sort by Size</a></li>
-                          </ul>
-                      </div>
+                    <div class="dropdown">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sort & Filter</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Sort By Date</a></li>
+                        <li><a class="dropdown-item" href="#">Has Attachment</a></li>
+                        <li><a class="dropdown-item" href="#">Sort by Size</a></li>
+                    </ul>
+                    </div>
                     <div class="all-emails-container">
-                      <div class="vertical-email-scroll vh-40"  style="width: 300px;">
                       <ul class="list-group list-group-flush overflow-auto vh-40" >
-                        <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
                         <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
                         <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
                         <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
@@ -63,94 +65,59 @@
                         <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
                         <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>                      
                         <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>     
-                      </ul>
+                     </ul>
                     </div>
-                    </div>
-                    </div>
-                    </div>
-                  </div>
                 </div>
-        </div>
-
-       <!-- 
-        <div class="col-md-2"> 
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">Emails</button>
-          <div class="collapse collapse-horizontal" id="collapseWidthExample">
-            <div class="card card-body" style="width: 300px;">
-              <div class="email-search-function">
-                <input type="text" label="Email Search" placeholder="AnonEmail.co">
-                <button type="button" class="btn btn-outline-dark" id="Email-search-submission">Submit</button>
-              </div>
-                <div class="dropdown">
-                  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Sort & Filter</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Sort By Date</a></li>
-                      <li><a class="dropdown-item" href="#">Has Attachment</a></li>
-                      <li><a class="dropdown-item" href="#">Sort by Size</a></li>
-                    </ul>
-                </div>
-              <div class="emails">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
-                  <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
-                  <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
-                  <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
-                  <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
-                  <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
-                  <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
-                  <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>     
-                </ul>
-              </div>
             </div>
           </div>
-       </div>--!>
-      
-    
+        </div>
 
 
-        <div class="col-md-9">
-        <h3> Welcome Anon, today is December 12, 2022. The time is 4:23PM. Currently you have 25 unread Emails, and 12 Spam emails.  </h3>
-        <div class="emailer-info">
-          <a href="#"> Fake-emailer@BVTHW.co </a> 
-          <p>12:22PM</p>
-          <p>Jackie Chan</p>
-          <p> December 12, 2022 </p>
-        </div>
-        <div class="extra-top-email-buttons">
-        </div>  <div class="btn-group me-2" role="group" aria-label="Second group">
-          <button type="button" class="btn btn-secondary">Forward</button>
-          <button type="button" class="btn btn-secondary">Translate</button>
-          <button type="button" class="btn btn-secondary">Move to</button>
-          <button type="button" class="btn btn-secondary">Label</button>
-          <button type="button" class="btn btn-secondary">Mark as Unread</button>
-          <button type="button" class="btn btn-secondary">Report</button>
-        </div>
-        <div class="actual-email">
-          <h1> Subject Line</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum leo vel orci porta. Mi proin sed libero enim sed. A arcu cursus vitae congue mauris rhoncus aenean. Nisi lacus sed viverra tellus in hac habitasse platea dictumst. Sodales neque sodales ut etiam sit amet. Vel risus commodo viverra maecenas accumsan lacus vel. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Sagittis eu volutpat odio facilisis mauris sit. Leo urna molestie at elementum eu facilisis sed. Nam aliquam sem et tortor consequat id. Lorem ipsum dolor sit amet. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Morbi tristique senectus et netus et malesuada fames ac. Risus ultricies tristique nulla aliquet enim tortor at auctor. Mattis rhoncus urna neque viverra justo nec ultrices dui. Est lorem ipsum dolor sit amet consectetur. Sit amet mattis vulputate enim nulla. Condimentum id venenatis a condimentum. Proin sagittis nisl rhoncus mattis rhoncus.
 
-          Mattis enim ut tellus elementum. Porttitor lacus luctus accumsan tortor posuere. Sociis natoque penatibus et magnis dis parturient montes. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Cursus metus aliquam eleifend mi. At auctor urna nunc id cursus metus. Curabitur vitae nunc sed velit dignissim. Scelerisque eu ultrices vitae auctor eu augue. Id volutpat lacus laoreet non. Risus ultricies tristique nulla aliquet enim tortor. Urna et pharetra pharetra massa massa. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Tempus urna et pharetra pharetra. Pellentesque adipiscing commodo elit at. Eu mi bibendum neque egestas congue. Facilisis gravida neque convallis a cras semper auctor. Et tortor consequat id porta nibh venenatis.</p>
-          <p> Emailer info on bottom</p>
+
+        <div class="col-lg-10">
+          <h3> Welcome Anon, today is December 12, 2022. The time is 4:23PM. Currently you have 25 unread Emails, and 12 Spam emails.  </h3>
+          <div class="emailer-info">
+            <a href="#"> Fake-emailer@BVTHW.co </a> 
+            <p>12:22PM</p>
+            <p>Jackie Chan</p>
+            <p> December 12, 2022 </p>
+          </div>
+          <div class="extra-top-email-buttons">
+            <div class="btn-group me-2" role="group" aria-label="Second group">
+              <button type="button" class="btn btn-secondary">Forward</button>
+              <button type="button" class="btn btn-secondary">Translate</button>
+              <button type="button" class="btn btn-secondary">Move to</button>
+              <button type="button" class="btn btn-secondary">Label</button>
+              <button type="button" class="btn btn-secondary">Mark as Unread</button>
+              <button type="button" class="btn btn-secondary">Report</button>
+            </div>
+          </div>
+          <div class="actual-email">
+            <h1> Subject Line</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum leo vel orci porta. Mi proin sed libero enim sed. A arcu cursus vitae congue mauris rhoncus aenean. Nisi lacus sed viverra tellus in hac habitasse platea dictumst. Sodales neque sodales ut etiam sit amet. Vel risus commodo viverra maecenas accumsan lacus vel. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Sagittis eu volutpat odio facilisis mauris sit. Leo urna molestie at elementum eu facilisis sed. Nam aliquam sem et tortor consequat id. Lorem ipsum dolor sit amet. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Morbi tristique senectus et netus et malesuada fames ac. Risus ultricies tristique nulla aliquet enim tortor at auctor. Mattis rhoncus urna neque viverra justo nec ultrices dui. Est lorem ipsum dolor sit amet consectetur. Sit amet mattis vulputate enim nulla. Condimentum id venenatis a condimentum. Proin sagittis nisl rhoncus mattis rhoncus.
+            Mattis enim ut tellus elementum. Porttitor lacus luctus accumsan tortor posuere. Sociis natoque penatibus et magnis dis parturient montes. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Cursus metus aliquam eleifend mi. At auctor urna nunc id cursus metus. Curabitur vitae nunc sed velit dignissim. Scelerisque eu ultrices vitae auctor eu augue. Id volutpat lacus laoreet non. Risus ultricies tristique nulla aliquet enim tortor. Urna et pharetra pharetra massa massa. Vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Tempus urna et pharetra pharetra. Pellentesque adipiscing commodo elit at. Eu mi bibendum neque egestas congue. Facilisis gravida neque convallis a cras semper auctor. Et tortor consequat id porta nibh venenatis.</p>
+            <p> Emailer info on bottom</p>
+          </div>
+          <div class="respond-to-email">
+            <input type="text" label="Email To" placeholder="To" id="email-to">
+            <input type="text" label="Email Subject" placeholder="Subject" id="email-subject">
+            <input type="text" label="Email Text" placeholder="Email Text Here" id="reply-text">
+            <button type="button" class="btn btn-outline-dark" id="Email-reply-submission">Submit</button>
+          </div>
+          <div class="botton-button-options">
+            <button type="button" class="btn btn-secondary">Arrow Left</button>
+            <button type="button" class="btn btn-secondary">Star</button>
+            <button type="button" class="btn btn-secondary">Trash</button>
+            <button type="button" class="btn btn-secondary">Archive</button>
+            <button type="button" class="btn btn-secondary">Print</button>
+            <button type="button" class="btn btn-secondary">Arrow Right</button>
+          </div>
+          </div> 
         </div>
-        <div class="respond-to-email">
-          <input type="text" label="Email To" placeholder="To">
-          <input type="text" label="Email Subject" placeholder="Subject">
-          <!--BB & CC-->
-          <input type="text" label="Email Text" placeholder="Email Text Here">
-          <button type="button" class="btn btn-outline-dark" id="Email-reply-submission">Submit</button>
-        </div>
-        <div class="botton-button-options">
-          <button type="button" class="btn btn-secondary">Arrow Left</button>
-          <button type="button" class="btn btn-secondary">Star</button>
-          <button type="button" class="btn btn-secondary">Trash</button>
-          <button type="button" class="btn btn-secondary">Archive</button>
-          <button type="button" class="btn btn-secondary">Print</button>
-          <button type="button" class="btn btn-secondary">Arrow Right</button>
-        </div>  <div class="btn-group me-2" role="group" aria-label="Second group">
-        </div>
-        </div>
-        </div>
-        </div>
+      </div>
+    </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
-</html>
+    </body>
+    </html>
