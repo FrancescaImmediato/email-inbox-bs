@@ -6,31 +6,41 @@
     <title>Bootstrap Grid</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="email-inbox-bs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
   </head>
 
   <body>
 
     <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-2" >
+            <img src="OnlyEmails.png" width="100%">
+          </div>
+          <div class="col-lg-10">
+                      <div class="welcome-message">
+            <h3> Welcome Anon, today is December 12, 2022. The time is 4:23PM. Currently you have 25 unread Emails, and 12 Spam emails.  </h3>
+          </div>
+          </div>
+      </div>
       <div class="row w-100">
 
         <div class="col-lg-2">
-          <h1> Logo here</h1>
           <p>
-          <a class="btn btn-primary collapsed" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Navigation Menu</a>
-          <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Inbox</button>
-          <button class="btn btn-primary collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle</button>
+          <a class="btn btn-light collapsed" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Menu</a>
+          <button class="btn btn-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Inbox</button>
+          <button class="btn btn-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle</button>
           </p>
 
           <div class="multi-collapse collapse" id="multiCollapseExample1">
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Main Inbox</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Starred</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Archived</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Labeled</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Spam</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Trash</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Sent</a>
-              <a href="#" class="list-group-item list-group-item-action list-group-item-success">Drafts</a>
+            <div class="list-group menu-group">
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Main Inbox</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Starred</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Archived</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Labeled</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Spam</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Trash</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Sent</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-light">Drafts</a>
             </div>  
             <button type="button" class="btn btn-outline-dark">Compose</button>
           </div>
@@ -50,7 +60,7 @@
                     </ul>
                     </div>
                     <div class="all-emails-container">
-                      <ul class="list-group list-group-flush overflow-auto vh-40" >
+                      <ul class="list-group list-group-flush" >
                         <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
                         <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
                         <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox"><h4>An0nEmail@BVTHW.co<h4> <h6> SUBJECT LINE<h6> <p> TIME and date </p> <p class="email-look"> lorem ipsum </li>
@@ -76,23 +86,22 @@
 
 
         <div class="col-lg-10">
-          <h3> Welcome Anon, today is December 12, 2022. The time is 4:23PM. Currently you have 25 unread Emails, and 12 Spam emails.  </h3>
           <div class="emailer-info">
             <a href="#"> Fake-emailer@BVTHW.co </a> 
             <p>12:22PM</p>
             <p>Jackie Chan</p>
             <p> December 12, 2022 </p>
           </div>
-          <div class="extra-top-email-buttons">
-            <div class="btn-group me-2" role="group" aria-label="Second group">
-              <button type="button" class="btn btn-secondary">Forward</button>
-              <button type="button" class="btn btn-secondary">Translate</button>
-              <button type="button" class="btn btn-secondary">Move to</button>
-              <button type="button" class="btn btn-secondary">Label</button>
-              <button type="button" class="btn btn-secondary">Mark as Unread</button>
-              <button type="button" class="btn btn-secondary">Report</button>
+          
+           <div class="button-button-options top-button-email">
+              <button type="button" class="btn btn-light">Forward</button>
+              <button type="button" class="btn btn-light">Translate</button>
+              <button type="button" class="btn btn-light">Move to</button>
+              <button type="button" class="btn btn-light">Label</button>
+              <button type="button" class="btn btn-light">Mark as Unread</button>
+              <button type="button" class="btn btn-light">Report</button>
             </div>
-          </div>
+
           <div class="actual-email">
             <h1> Subject Line</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum leo vel orci porta. Mi proin sed libero enim sed. A arcu cursus vitae congue mauris rhoncus aenean. Nisi lacus sed viverra tellus in hac habitasse platea dictumst. Sodales neque sodales ut etiam sit amet. Vel risus commodo viverra maecenas accumsan lacus vel. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Sagittis eu volutpat odio facilisis mauris sit. Leo urna molestie at elementum eu facilisis sed. Nam aliquam sem et tortor consequat id. Lorem ipsum dolor sit amet. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Morbi tristique senectus et netus et malesuada fames ac. Risus ultricies tristique nulla aliquet enim tortor at auctor. Mattis rhoncus urna neque viverra justo nec ultrices dui. Est lorem ipsum dolor sit amet consectetur. Sit amet mattis vulputate enim nulla. Condimentum id venenatis a condimentum. Proin sagittis nisl rhoncus mattis rhoncus.
@@ -100,18 +109,17 @@
             <p> Emailer info on bottom</p>
           </div>
           <div class="respond-to-email">
-            <input type="text" label="Email To" placeholder="To" id="email-to">
-            <input type="text" label="Email Subject" placeholder="Subject" id="email-subject">
-            <input type="text" label="Email Text" placeholder="Email Text Here" id="reply-text">
+            <p> Reply </p>
+            <input type="text" class="lets-respond">
             <button type="button" class="btn btn-outline-dark" id="Email-reply-submission">Submit</button>
           </div>
-          <div class="botton-button-options">
-            <button type="button" class="btn btn-secondary">Arrow Left</button>
-            <button type="button" class="btn btn-secondary">Star</button>
-            <button type="button" class="btn btn-secondary">Trash</button>
-            <button type="button" class="btn btn-secondary">Archive</button>
-            <button type="button" class="btn btn-secondary">Print</button>
-            <button type="button" class="btn btn-secondary">Arrow Right</button>
+          <div class="button-button-options bottom-email-buttons">
+            <button type="button" class="btn btn-light">Arrow Left</button>
+            <button type="button" class="btn btn-light">Star</button>
+            <button type="button" class="btn btn-light">Trash</button>
+            <button type="button" class="btn btn-light">Archive</button>
+            <button type="button" class="btn btn-light">Print</button>
+            <button type="button" class="btn btn-light">Arrow Right</button>
           </div>
           </div> 
         </div>
